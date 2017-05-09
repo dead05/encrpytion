@@ -52,29 +52,29 @@ void crypt(char str[], int transform_scheme)
 		{
 			str[i] = str[i] + transform_scheme;
 
-			//if(str[i] > 'Z')
-			//{
-			//	str[i] = 'A' + ((str[i] - 'Z') - 1);
-			//}
+			if(str[i] > 'Z')
+			{
+				str[i] = 'A' + ((str[i] - 'Z') - 1);
+			}
 
-			//if(str[i] < 'A')
-			//{
-			//	str[i] = 'Z' - (('A' - str[i]) - 1);
-			//}
+			if(str[i] < 'A')
+			{
+				str[i] = 'Z' - (('A' - str[i]) - 1);
+			}
 		}
 		if(str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] + transform_scheme;
 
-			//if(str[i] > 'z')
-			//{
-			//	str[i] = 'a' + ((str[i] - 'z') - 1);
-			//}
+			if(str[i] > 'z')
+			{
+				str[i] = 'a' + ((str[i] - 'z') - 1);
+			}
 
-			//if(str[i] < 'a')
-			//{
-			//	str[i] = 'z' - (('a' - str[i]) - 1);
-			//}
+			if(str[i] < 'a')
+			{
+				str[i] = 'z' - (('a' - str[i]) - 1);
+			}
 		}
 	}
 }
